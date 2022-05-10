@@ -7,13 +7,13 @@ SHELL=/bin/bash
 test: mypy pytest doctest coverage-report  # run with -k flag in order to continue in case of recipe failure
 
 mypy:
-	mypy package_name/
+	mypy {PACKAGE_NAME}/
 
 pytest:
 	coverage run -m pytest -vv tests/
 
 doctest:
-	python -m pytest -vv --doctest-modules --doctest-continue-on-failure ./package_name/
+	python -m pytest -vv --doctest-modules --doctest-continue-on-failure ./{PACKAGE_NAME}/
 
 coverage-report:
 	coverage xml

@@ -1,20 +1,20 @@
 [tool.poetry]
-name = package_name
+name = {PACKAGE_NAME}
 version = "0.0.1"
 description = ""
 authors = ["w2sv <zangenbergjanek@googlemail.com>"]
-license = "license"
-repository = "https://github.com/w2sv/repo_name"
+{LICENSE} = "{LICENSE}"
+repository = "https://github.com/w2sv/{REPO_NAME}"
 keywords=[]
 classifiers = [
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: {LICENSE} License",
         "Operating System :: OS Independent",
     ]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^py_version"
+python = "^{PY_VERSION}"
 
 [tool.poetry.dev-dependencies]
 mypy = "*"
