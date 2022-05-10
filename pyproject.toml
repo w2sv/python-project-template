@@ -1,0 +1,26 @@
+[tool.poetry]
+name = package_name
+version = "0.0.1"
+description = ""
+authors = ["w2sv <zangenbergjanek@googlemail.com>"]
+license = "license"
+repository = "https://github.com/w2sv/repo_name"
+keywords=[]
+classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^py_version"
+
+[tool.poetry.dev-dependencies]
+mypy = "*"
+pytest = "*"
+coverage = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
