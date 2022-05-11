@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 
 # exit script in case of insufficient number of arguments received
-if [ "$#" -ne 4 ]; then
+if [ "$#" -ne 5 ]; then
     echo "Illegal number of parameters; Required 4, received $#" >&2
     exit 2
 fi
@@ -10,6 +10,7 @@ package_name=$1
 repo_name=$2
 py_version=$3
 license=$4
+github_token=$5
 
 # replace placeholders
 replace_placeholders(){
@@ -32,7 +33,7 @@ mkdir $package_name
 # remove .git corresponding to template repo and initialize new one
 rm -rf .git
 git init
-git remote add origin "https://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@github.com/w2sv/$repo_name"
+git remote add origin "https://$github_token@github.com/w2sv/$repo_name"
 
 # remove CREATE script and rename parent directory
 rm CREATE.sh
