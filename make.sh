@@ -26,7 +26,7 @@ do
    esac
 done
 
-# exit if
+# exit if required options not passed
 if [ -z "$repo" ] || [ -z "$version" ] || [ -z "$license" ]; then
     echo "Arguments missing."; echo; help
 fi
