@@ -5,8 +5,8 @@ Just another template to set up a python repository (whether to become a pypi pa
 ## Usage
 ```shell
 $ git clone https://github.com/w2sv/python-package-template.git
-$ cd python-package-template
-$ make.sh \
+$ cd python-project-template
+$ ./make.sh \
     -r repo_name \
     -p package_name  # optional, will be set to repo_name if not specified \
     -v python_version  # e.g. 3.10
