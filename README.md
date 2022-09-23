@@ -1,33 +1,18 @@
-# __{PACKAGE_NAME}__
+# __Python project template__
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/{PACKAGE_NAME})
-[![Build](https://github.com/{USER}/{REPO_NAME}/actions/workflows/build.yaml/badge.svg)](https://github.com/{USER}/{REPO_NAME}/actions/workflows/build.yaml)
-![PyPI](https://img.shields.io/pypi/v/{PACKAGE_NAME})
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/{USER}/{REPO_NAME})
-![GitHub](https://img.shields.io/github/license/{USER}/{REPO_NAME})
-
-{DESCRIPTION}
-
-## Download
-
-```shell
-$ pip install {PACKAGE_NAME}
-```
-
-## Installation
-
-```shell
-$ poetry install
-```
-
-## Testing
-
-```shell
-$ make test
-```
+Just another template to set up a python repository (whether to become a pypi package or not) for usage with poetry, mypy, pytest, doctest, coverage, github actions & codecov, as well as with README badges!!! 🤯 
 
 ## Usage
-...
+```shell
+$ git clone https://github.com/w2sv/python-package-template.git
+$ cd python-package-template
+$ make.sh \
+    -r repo_name \
+    -p package_name  # optional, will be set to repo_name if not specified \
+    -v python_version  # e.g. 3.10
+    -l license
+    -d description # optional
+    -h  # show help text
+```
 
-## License
-[{LICENSE} License](LICENSE)
+After that all the template-specific files such as this README.md will be removed, the parent directory renamed & the git remote url set, such that you'll only have to define your dependencies in the pyproject.toml, install the environment, add a license text to LICENSE and you're all set to get to the actual coding part.     
