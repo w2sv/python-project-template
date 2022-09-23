@@ -1,14 +1,14 @@
 [tool.poetry]
-name = {PACKAGE_NAME}
+name = "{PACKAGE_NAME}"
 version = "0.0.1"
-description = ""
-authors = ["w2sv <zangenbergjanek@googlemail.com>"]
-{LICENSE} = "{LICENSE}"
-repository = "https://github.com/w2sv/{REPO_NAME}"
+description = "{DESCRIPTION}"
+authors = ["{USER} <{EMAIL}>"]
+license = "{LICENSE}"
+repository = "https://github.com/{USER}/{PACKAGE_NAME}"
 keywords=[]
 classifiers = [
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: {LICENSE} License",
+        "License :: OSI Approved ::  License",
         "Operating System :: OS Independent",
     ]
 readme = "README.md"

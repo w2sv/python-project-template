@@ -1,32 +1,22 @@
 SHELL=/bin/bash
 
-###########
-# Testing #
-###########
+# $$$$$$$$ Testing $$$$$$$$$
 
-test: mypy pytest doctest coverage-report  # run with -k flag in order to continue in case of recipe failure
+test: mypy pytest doctest coverage-report
 
 mypy:
-	mypy {PACKAGE_NAME}/
+	mypy /{PACKAGE_NAME}
 
 pytest:
 	coverage run -m pytest -vv tests/
 
 doctest:
-	python -m pytest -vv --doctest-modules --doctest-continue-on-failure ./{PACKAGE_NAME}/
+	coverage run -am pytest -vv --doctest-modules --doctest-continue-on-failure ./{PACKAGE_NAME}/
 
 coverage-report:
 	coverage xml
 	coverage report
 
-##############
-# Publishing #
-##############
-
-publish: test patch-version _publish
-
-patch-version:
-	poetry version patch
-
-_publish:
-	poetry publish --build
+coverage-show-html:
+	coverage html
+	open htmlcov/index.html

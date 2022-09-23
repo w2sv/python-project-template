@@ -1,20 +1,33 @@
 # __{PACKAGE_NAME}__
 
-[![Python {PY_VERSION}](https://img.shields.io/badge/python-{PY_VERSION}-blue.svg)](https://www.python.org/downloads/release/python-{PY_VERSION}0/)
-[![Build](https://github.com/w2sv/{REPO_NAME}/actions/workflows/build.yaml/badge.svg)](https://github.com/w2sv/{REPO_NAME}/actions/workflows/build.yaml)
-{CODECOV_BADGE}
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/{PACKAGE_NAME})
+[![Build](https://github.com/{USER}/{REPO_NAME}/actions/workflows/build.yaml/badge.svg)](https://github.com/{USER}/{REPO_NAME}/actions/workflows/build.yaml)
 ![PyPI](https://img.shields.io/pypi/v/{PACKAGE_NAME})
-![GitHub](https://img.shields.io/github/license/w2sv/{REPO_NAME})
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/{USER}/{REPO_NAME})
+![GitHub](https://img.shields.io/github/license/{USER}/{REPO_NAME})
 
 {DESCRIPTION}
 
-### Install
+## Download
+
 ```shell
 $ pip install {PACKAGE_NAME}
 ```
 
-### Usage
+## Installation
+
+```shell
+$ poetry install
+```
+
+## Testing
+
+```shell
+$ make test
+```
+
+## Usage
 ...
 
-### License
+## License
 [{LICENSE} License](LICENSE)

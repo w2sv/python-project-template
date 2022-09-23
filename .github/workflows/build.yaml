@@ -2,7 +2,7 @@
 
 name: Build
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -10,14 +10,14 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [ {PY_VERSION}, 3.9 ]
+        python-version: [ {PY_VERSION} ]
 
     steps:
       #----------------------------------------------
       #       check-out repo and set-up python
       #----------------------------------------------
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up python
         id: setup-python
