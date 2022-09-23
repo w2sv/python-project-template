@@ -8,11 +8,11 @@ $ git clone https://github.com/w2sv/python-package-template.git
 $ cd python-project-template
 $ ./make.sh \
     -r repo_name \
-    -p package_name  # optional, will be set to repo_name if not specified \
-    -v python_version  # e.g. 3.10
-    -l license
-    -d description # optional
-    -h  # show help text
+    -p package_name \  # optional, will be set to repo_name if not specified \
+    -v python_version \  # e.g. 3.10
+    -l license \
+    -d description \ # optional
+    -h # show help text
 ```
 
 After that all the template-specific files such as this README.md will be removed, the parent directory renamed & the git remote url set, such that you'll only have to define your dependencies in the pyproject.toml, install the environment, add a license text to LICENSE and you're all set to get to the actual coding part.     
