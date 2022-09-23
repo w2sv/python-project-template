@@ -81,3 +81,6 @@ rm make.sh
 
 echo "Rename root dir"
 mv ../python-project-template ../"$repo"
+
+# remove old dir if persisted
+rm -rf python-project-template/
